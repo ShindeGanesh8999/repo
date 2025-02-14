@@ -388,23 +388,23 @@ $(document).ready(function(){
 
         console.log(JSON.stringify(data_array));
         
-        // $.ajax({
-        // url: '<?=base_url();?>add/forms',
-        // method: 'POST',
-        // data: {
-        //     'data': JSON.stringify(data_array),
-        //     'form_head': $('#form_head').val(),
-        //     'form_desc': $('#form_desc').val(),
-        // },
-        // success: function(res){
-        //     alert('Form saved ..');
-        //     window.location.href = '<?=base_url();?>all/forms';
-        // },
-        // error: function(xhr, status, error){
-        //     console.log('false');
-        //     return;
-        // }
-        // });
+        $.ajax({
+        url: '<?=base_url();?>add/forms',
+        method: 'POST',
+        data: {
+            'data': JSON.stringify(data_array),
+            'form_head': $('#form_head').val(),
+            'form_desc': $('#form_desc').val(),
+        },
+        success: function(res){
+            alert('Form saved ..');
+            window.location.href = '<?=base_url();?>all/forms';
+        },
+        error: function(xhr, status, error){
+            console.log('false');
+            return;
+        }
+        });
     });
 });
 </script>

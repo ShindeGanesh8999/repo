@@ -101,7 +101,7 @@ class Welcome_model extends CI_Model
         
         $this->db->select('user_id');  
         $this->db->from('users');
-        $this->db->where('mobile', '8999779536');
+        $this->db->where('mobile', $id);
         $query = $this->db->get();
 
 
